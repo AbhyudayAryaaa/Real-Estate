@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Listings</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+
+        /* HEADER */
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 12px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #f1c40f;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        /* SEARCH BOX */
+        .search-box {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .search-box input, .search-box select {
+            padding: 10px;
+            width: 180px;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: 1px solid #aaa;
+        }
+
+        .search-box button {
+            padding: 10px 20px;
+            background: #2c3e50;
+            border: none;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* PROPERTY GRID */
+        .properties {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .property {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .property img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .property-content {
+            padding: 15px;
+        }
+
+        .property-content h3 {
+            margin: 0;
+        }
+
+        .property-content p {
+            opacity: 0.8;
+        }
+
+        .price {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* INQUIRY FORM */
+        .inquiry {
+            margin-top: 40px;
+            background: #2c3e50;
+            padding: 25px;
+            color: white;
+            border-radius: 10px;
+        }
+
+        .inquiry input, .inquiry textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            margin-bottom: 15px;
+        }
+
+        .inquiry button {
+            padding: 12px 20px;
+            background: #f1c40f;
+            border: none;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #2c3e50;
+            color: white;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>DreamHomes Real Estate</h1>
+        <nav>
+            <a href="#properties">Listings</a>
+            <a href="#inquiry">Inquiry</a>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <!-- SEARCH FILTER -->
+        <div class="search-box">
+            <h3>Search Properties</h3>
+            <input type="text" placeholder="Location">
+            <select>
+                <option>Price Range</option>
+                <option>Below ₹20,00,000</option>
+                <option>₹20,00,000 - ₹50,00,000</option>
+                <option>₹50,00,000 - ₹1,00,00,000</option>
+                <option>Above ₹1,00,00,000</option>
+            </select>
+            <button>Search</button>
+        </div>
+
+        <!-- PROPERTY LISTINGS -->
+        <section id="properties" class="properties">
+
+            <div class="property">
+                <img src="https://images.unsplash.com/photo-1572120360610-d971b9b78825" alt="">
+                <div class="property-content">
+                    <h3>Luxury Villa</h3>
+                    <p>Location: Mumbai</p>
+                    <p class="price">₹1,20,00,000</p>
+                </div>
+            </div>
+
+            <div class="property">
+                <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994" alt="">
+                <div class="property-content">
+                    <h3>Modern Apartment</h3>
+                    <p>Location: Pune</p>
+                    <p class="price">₹55,00,000</p>
+                </div>
+            </div>
+
+            <div class="property">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="">
+                <div class="property-content">
+                    <h3>Family House</h3>
+                    <p>Location: Delhi</p>
+                    <p class="price">₹75,00,000</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- INQUIRY FORM -->
+        <section id="inquiry" class="inquiry">
+            <h2>Property Inquiry Form</h2>
+
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="text" placeholder="Property Name" required>
+                <textarea rows="5" placeholder="Your Message"></textarea>
+                <button type="submit">Submit Inquiry</button>
+            </form>
+        </section>
+
+    </div>
+</body>
+</html>
